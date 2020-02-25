@@ -27,10 +27,26 @@ app.use(bodyParser.urlencoded({limit: '5000mb', extended: true }));
 app.use(bodyParser.json({limit: '5000mb'}));;
 app.use(allowCrossDomain);
 app.use(function(req, res, next) {
-    console.log('Something is happening.');
+    console.log('Something is happening on ========>>>>>   http://localhost:3306/api/v0/admin && http://localhost:3306/');
     next();
 });
+
+app.get('/', function(req, res) {
+    var query = "SELECT * FROM `admin`";
+    runQuery(query, [], function (err, result) { 
+        if(
+            err
+        ){
+            console.error('RUN QUERY ERROR******', JSON.stringify(err));
+            res.send(err);
+        }else{
+            res.send(result);
+        }
+    });  
+});
+
 addRoutes('api',app);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
