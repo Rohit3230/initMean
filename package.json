@@ -18,15 +18,18 @@
   "homepage": "https://github.com/Rohit3230/initMean#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "ejs": "^2.3.4",
     "express": "^4.17.1",
+    "fetch": "^1.1.0",
+    "html": "^1.0.0",
     "mongodb": "^2.2.33",
     "mongoose": "~3.6.13",
     "mysql": "^2.18.0",
     "nodemon": "^1.17.4",
-    "compression": "^1.7.4",
-    "cookie-parser": "^1.4.4",
-    "html": "^1.0.0"
+    "process": "^0.11.10",
+    "request": "^2.88.2"
   }
 }
